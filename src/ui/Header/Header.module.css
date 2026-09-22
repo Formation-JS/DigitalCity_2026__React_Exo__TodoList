@@ -1,0 +1,18 @@
+.main-header {
+    background-color: navy;
+    color: khaki;
+    text-shadow: 
+        0.1ch 0.0ch 0.1ch deeppink,
+        -0.1ch 0.0ch 0.1ch deeppink,
+        0ch 0.1ch 0.1ch deeppink,
+        0ch -0.1ch 0.1ch deeppink,
+        0.1ch 0.1ch 0.1ch deeppink,
+        -0.1ch 0.1ch 0.1ch deeppink,
+        -0.1ch -0.1ch 0.1ch deeppink,
+        0.1ch -0.1ch 0.1ch deeppink;
+    padding: 0.3em;
+
+    * {
+        margin: 0;
+    }
+}

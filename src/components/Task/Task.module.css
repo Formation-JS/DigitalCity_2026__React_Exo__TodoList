@@ -1,0 +1,29 @@
+.task-form {
+
+    display: flex;
+    flex-direction: column;
+    gap: 1ch;
+
+    div {
+        display: flex;
+        flex-direction: row;
+        gap: 1ch;
+
+        input,
+        select,
+        textarea {
+            resize: none;
+            flex-grow: 1;
+        }
+
+        input,
+        select {
+            height: 1.6em;
+        }
+
+        textarea {
+            height: 5.2em;
+        }
+    }
+
+}

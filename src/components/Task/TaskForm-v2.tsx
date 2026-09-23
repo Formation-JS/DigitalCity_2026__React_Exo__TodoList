@@ -26,7 +26,7 @@ type TaskState = {
 
 
 // L'action est en dehors du composant, pour injecter des données, il faut utiliser la méthode "bind"
-async function taskSubmitAction(onTaskSubmit : (task: TaskData) => void, state: TaskState, formData: FormData): Promise<TaskState> {
+async function taskSubmitAction(onTaskSubmit : (task: TaskData) => void, _state: TaskState, formData: FormData): Promise<TaskState> {
     const { success, data, error } = await taskSchema.safeParseAsync(Object.fromEntries(formData));
     if (!success) {
         return {

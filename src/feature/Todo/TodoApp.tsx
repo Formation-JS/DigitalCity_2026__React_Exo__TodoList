@@ -47,7 +47,7 @@ export default function TodoApp() {
             <TaskForm onTaskSubmit={handleNewTask} />
 
             <h2>Liste des tâches</h2>
-            <TaskList />
+            <TaskList tasks={tasks} onFinishTask={handleFinishTask} onDeleteTask={handleDeleteTask} />
         </div>
     );
 }

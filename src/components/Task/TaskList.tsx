@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import type { Task } from "../../@types/task";
 
 type TaskListProps = {
@@ -23,12 +24,15 @@ type TaskListItemProps = Task & {
     onDelete: (taskid: string) => void;
 };
 function TaskListItem({ id, name, desc, priority, isDone, onFinish, onDelete }: TaskListItemProps) {
+    
+    const status = useMemo(() => isDone ? 'Terminé' : 'En cours', [isDone]);
+    
     return (
         <article>
             <div>
                 <p>{name} - {priority}</p>
                 {desc && <p>{desc}</p>}
-                <p>Status: {isDone ? 'Terminé' : 'En cours'}</p>
+                <p>Status: {status}</p>
             </div>
             <div>
                 <button onClick={() => onFinish(id)} disabled={isDone}>Terminer</button>
